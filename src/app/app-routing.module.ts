@@ -3,6 +3,8 @@ import { RouterModule, Routes } from "@angular/router";
 
 
 const HomeModule = import('./home/home.module').then((m) => m.HomeModule);
+const AnimaisModule = import('./animais/animais.module').then((m)=> m.AnimaisModule);
+
 const routes: Routes = [
   {
     path: '',
@@ -12,7 +14,12 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => HomeModule,
-  }
+  },
+  {
+    path: 'animais',
+    loadChildren: () => AnimaisModule,
+
+  },
 ];
 
 @NgModule({
